@@ -50,16 +50,8 @@ export default function catchErrors({ filename, components, imports }) {
             });
           }
 
-          return (
-            <span
-              style={{
-                background: 'red',
-                color: 'white'
-              }}
-            >
-              Render error!
-            </span>
-          );
+          // I don't want to render anything in production
+          return null;
         }
       }
     });
